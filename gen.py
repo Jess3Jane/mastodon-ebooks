@@ -2,10 +2,7 @@ import markovify
 import json
 from mastodon import Mastodon
 
-with open("settings.json") as fp:
-    settings = json.load(fp)
-
-api_base_url = settings.setdefault("api_base_url", "https://botsin.space")
+api_base_url = "https://botsin.space"
 
 client = Mastodon(
         client_id="clientcred.secret", 
