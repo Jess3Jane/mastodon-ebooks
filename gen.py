@@ -1,5 +1,6 @@
 import markovify
 import json
+import time
 from mastodon import Mastodon
 
 api_base_url = "https://botsin.space"
@@ -16,7 +17,7 @@ print("Running...")
 while True:
     print("tooting")
     # This is not the best long term fix tbh
-    sentance = None
+    sentence = None
     while sentence is None:
         sentence = model.make_sentence()
     client.toot(sentence.replace(chr(31), "\n"))
