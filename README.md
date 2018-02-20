@@ -10,6 +10,4 @@ run `python3 main.py` to login and scrape
 
 run `pyhton3 gen.py` to make a toot
 
-this will toot once every three hours after until it crashes
-
-maybe the code won't be total jenk eventually but \shrug
+cron is an okay choice to make it toot regularly

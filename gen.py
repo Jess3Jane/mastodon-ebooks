@@ -13,13 +13,9 @@ client = Mastodon(
 with open("corpus.txt") as fp:
     model = markovify.NewlineText(fp.read())
 
-print("Running...")
-while True:
-    print("tooting")
-    # This is not the best long term fix tbh
-    sentence = None
-    while sentence is None:
-        sentence = model.make_sentence()
-    client.toot(sentence.replace(chr(31), "\n"))
-    print("sleeping")
-    time.sleep(60*60*3)
+print("tooting")
+# This is not the best long term fix tbh
+sentence = None
+while sentence is None:
+    sentence = model.make_sentence(tries=100000)
+client.toot(sentence.replace(chr(31), "\n"))
