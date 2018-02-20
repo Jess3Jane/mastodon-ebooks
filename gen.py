@@ -15,6 +15,10 @@ with open("corpus.txt") as fp:
 print("Running...")
 while True:
     print("tooting")
-    client.toot(model.make_sentence().replace(chr(31), "\n"))
+    # This is not the best long term fix tbh
+    sentance = None
+    while sentence is None:
+        sentence = model.make_sentence()
+    client.toot(sentence.replace(chr(31), "\n"))
     print("sleeping")
     time.sleep(60*60*3)
