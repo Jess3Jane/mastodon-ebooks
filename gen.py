@@ -14,8 +14,8 @@ with open("corpus.txt") as fp:
     model = markovify.NewlineText(fp.read())
 
 print("tooting")
-# This is not the best long term fix tbh
 sentence = None
+# you will make that damn sentence
 while sentence is None:
     sentence = model.make_sentence(tries=100000)
-client.toot(sentence.replace(chr(31), "\n"))
+client.toot(sentence.replace("\0", "\n"))
