@@ -19,13 +19,22 @@ if not path.exists("usercred.secret"):
     client.log_in(email, password, to_file="usercred.secret")
 
 def parse_toot(toot):
-    soup = BeautifulSoup(toot.content, "html.parser")
     if toot.spoiler_text != "": return
     if toot.reblog is not None: return
     if toot.visibility not in ["public", "unlisted"]: return
+
+    soup = BeautifulSoup(toot.content, "html.parser")
     
-    # remove all mentions
-    for mention in soup.select("span"):
+    # pull the mentions out
+    # for mention in soup.select("span.h-card"):
+    #     mention.unwrap()
+
+    # for mention in soup.select("a.u-url.mention"):
+    #     mention.unwrap()
+
+    # we will destroy the mentions until we're ready to use them
+    # someday turbocat, you will talk to your sibilings
+    for mention in soup.select("span.h-card"):
         mention.decompose()
     
     # make all linebreaks actual linebreaks
@@ -33,25 +42,26 @@ def parse_toot(toot):
         lb.insert_after("\n")
         lb.decompose()
 
-    # put each p element its own line because sometimes they decide not to be
+    # make each p element its own line because sometimes they decide not to be
     for p in soup.select("p"):
         p.insert_after("\n")
         p.unwrap()
     
+    # keep hashtags in the toots
+    for ht in soup.select("a.hashtag"):
+        ht.unwrap()
+
     # unwrap all links (i like the bots posting links)
-    links = []
     for link in soup.select("a"):
-        links += [link["href"]]
+        link.insert_after(link["href"])
         link.decompose()
 
     text = map(lambda a: a.strip(), soup.get_text().strip().split("\n"))
 
-    mentions = [mention.acct for mention in toot.mentions]
-
     # next up: store this and patch markovify to take it
     # return {"text": text, "mentions": mentions, "links": links}
     # it's 4am though so we're not doing that now, but i still want the parser updates
-    return "\0".join(list(text) + links)
+    return "\0".join(list(text))
 
 def get_toots(client, id):
     i = 0
