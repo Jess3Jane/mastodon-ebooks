@@ -2,7 +2,6 @@ from mastodon import Mastodon
 from getpass import getpass
 from os import path
 from bs4 import BeautifulSoup
-import json
 import re
 
 api_base_url = "https://botsin.space"
