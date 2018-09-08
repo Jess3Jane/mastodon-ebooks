@@ -1,3 +1,12 @@
+# mastodon-ebooks
+**Lynnear Edition**
+
+This version makes quite a few changes from the original, such as:
+- Unicode support
+- Non-Markov stuff
+- its very cute
+
+## Original README
 hey look it's an ebooks bot
 
 python3
