@@ -26,6 +26,7 @@ media_description = None
 if random.randint(1, 4) == 2:
 	#time for some nonstandard behaviour babey
 	choice = random.randint(1, 7)
+	# choice = 69
 	if choice == 1:
 		insults = ["suck my ass", "you're a poopeater", "go to heck",
 		"i will replace you", "shut up", "get fricked",
@@ -45,7 +46,8 @@ if random.randint(1, 4) == 2:
 		"queer", "my kind of", "sapphic", "linux", "anime", "woke", "anarchist",
 		"socialist", "short", "heavy", "nervous", "shy", "gamer", "femme", "butch",
 		"futch", "soft butch", "high femme", "super feminine", "trans",
-		"transbian", "optimistic", "pessimistic", "quiet", "smart"]
+		"transbian", "optimistic", "pessimistic", "quiet", "smart", "deep voice", 
+		"ghost", "programmer"]
 		compliments = ["so hot", "in right now", "the next big thing", "the best",
 		"all my wives", "so fucking gay", "epic", "literally the best thing",
 		"what i wake up for", "why i'm a lesbian", "worth fighting for",
@@ -78,7 +80,9 @@ if random.randint(1, 4) == 2:
 		"cisgender people", "the cisheteropatriarchy", "uwu", "shitty memes",
 		"monopoly (the economic thing)", "monopoly (the board game)",
 		"being sucked into\na black hole", "unfunny jokes",
-		"AAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAA", "that guy everyone hates"]
+		"AAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAA", "that guy everyone hates",
+		"the second level in\nsonic spinball", "bitcoin memers",
+		"the entire right wing", "conservatism", "doodoo faeces"]
 
 		good = ["generating memes with imagemagick and python", "being gay", 
 		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
@@ -99,15 +103,15 @@ if random.randint(1, 4) == 2:
 		"speedrunning", "decentralising the web",
 		"seizing the means\nof production", "karl marx", "pyotr kropotkin",
 		"big dick energy", "smol dick energy", "surrleal meams",
-		"lynnesbian\'s amazing ass"]
+		"lynnesbian\'s amazing ass", "lady lumb", "oestrogen"]
 
 		#convert drake.jpg -pointsize 30 -gravity center -draw "text 20,-150 'not slime girls'" drakeout.jpg
 
 		badchoice = random.choice(bad)
 		goodchoice = random.choice(good)
 
-		subchoice = random.randint(1, 4)
-		# subchoice = 3
+		subchoice = random.randint(1, 5)
+		# subchoice = 5
 
 		if subchoice == 1:
 			#drake meme
@@ -147,6 +151,14 @@ if random.randint(1, 4) == 2:
 			media_description = "A comic. A man steps in shit, and exclaims such. " \
 			+ "He checks his foot, and we see that he has " \
 			+ "{} written on the sole of his shoe.".format(badchoice)
+		elif subchoice == 5:
+			#karl marx quote
+			subprocess.run(args = ["convert", "memes/marx.jpg", "-pointsize", "70",
+				"-gravity", "center", "-fill", "white", "-draw",
+				"text 120,-200 'Fuck {}.\nI love {}!'".format(badchoice, goodchoice),
+				"meme.jpg"])
+			media_description = "A quote from Karl Marx. The quote reads: " \
+			+ "Fuck {}. I love {}!".format(badchoice, goodchoice)
 
 		media = "meme.jpg"
 
