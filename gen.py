@@ -2,7 +2,7 @@ import markovify
 import json
 import time
 from mastodon import Mastodon
-import re, random
+import re, random, subprocess
 
 api_base_url = "https://botsin.space" #todo: this shouldn't be hardcoded
 
@@ -20,10 +20,12 @@ sentence = None
 while sentence is None or len(sentence) > 500:
 	sentence = model.make_sentence(tries=100000)
 toot = sentence.replace("\0", "\n")
+media = None
+media_description = None
 
 if random.randint(1, 10) == 3:
 	#time for some nonstandard behaviour babey
-	choice = random.randint(1, 3)
+	choice = random.randint(1, 4)
 	if choice == 1:
 		insults = ["suck my ass", "you're a poopeater", "go to heck",
 		"i will replace you", "shut up", "get fricked",
@@ -34,7 +36,8 @@ if random.randint(1, 10) == 3:
 		"get nae nae'd", "you're the worst", "begone thot", "you're a stink",
 		"you are my mistress and i live to serve you"]
 		prefaces = ["hey", "guess what", "", "special message for",
-		"telegram for", "bringing this fight to mastodon."]
+		"telegram for", "bringing this fight to mastodon.",
+		"this is a callout post."]
 		toot = "{} @lynnesbian@deadinsi.de {}".format(
 			random.choice(prefaces), random.choice(insults))
 	elif choice == 2:
@@ -55,6 +58,50 @@ if random.randint(1, 10) == 3:
 		if random.randint(1, 3) == 2:
 			lesbian = "lesbian"
 			toot = "".join(random.sample(lesbian, len(lesbian)))
+	elif choice == 4:
+		bad = ["not being a lesbian", "media transfer protocol",
+		"proprietary software", "capitalism", "heterosexuality", "not slime girls",
+		"not following @lynnesbian@deadinsi.de", "shitposts", "elon musk", 
+		"reply guys", "gamers", "alt-right bullshit", "twitter", "subtoots",
+		"instance drama", "billionaires", "millionaires", 
+		"you used to call me on your cell phone", "the lorax movie",
+		'"ethical" capitalism', "disease, pestilence, war, famine", "ISIS",
+		"citrustwee claiming\nit\\'s her birthday", "being straight",
+		"pinging @everyone on a discord\nwith more than 10 people", "brocialism",
+		"capitalist apologia", "reddit", "doxxing", "fatphobia", "biphobia",
+		"transphobia", "transmisia", "homophobia", "racism", "misogyny",
+		"anti-feminism", "aphobia", "enbyphobia", "gender binary"]
+		good = ["generating memes with imagemagick and python", "being gay", 
+		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
+		"yuri", "linux", "the girl reading this", "the enby reading this",
+		"mastodon", "pleroma", "the fediverse", "being super gay", "OwO", "0u0",
+		"resurrecting dead memes", "using the drake meme format", "jorts",
+		"markov chains", "jpeg compression", "you <3", "lynne", 
+		"replying to this toot", "fully automated luxury\ngay space communism",
+		"fat yoshi", "my butt", "kinkposting", "hornt on main", "debian",
+		"arch linux", "playstation portable", "a PSP running\ncustom firmware",
+		"unicode", "writing everything in lowercase\nto seem cool and distant",
+		"love", "the fediverse", "after dark", "nudes from cuties", "anarchism",
+		"socialism", "staying woke", "intersectionalism",
+		"the tendency of the rate\nof profit to fall", "being gay", "bottom text",
+		"the colour purple", "the number 3, as\nit is my favourite\nnumber", "me",
+		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns"]
+
+		#convert drake.jpg -pointsize 30 -gravity center -draw "text 20,-150 'not slime girls'" drakeout.jpg
+
+		badchoice = random.choice(bad)
+		goodchoice = random.choice(good)
+		subprocess.run(args = ["convert", "drake.jpg", "-pointsize", "30",
+			"-gravity", "center", "-draw",
+			"text 20,-150 '{}'".format(badchoice), "drakeout.jpg"])
+
+		subprocess.run(args = ["convert", "drakeout.jpg", "-pointsize", "30",
+			"-gravity", "center", "-draw",
+			"text 20,50 '{}'".format(goodchoice),
+			"-quality", "10", "drakeout.jpg"])
+
+		media = "drakeout.jpg"
+		media_description = "A Drake meme. Drake is disgusted by {}, and is pleased by {}.".format(badchoice, goodchoice)
 
 	else:
 		print ("lynne is still working on me. i'm not done quite yet!")
@@ -79,5 +126,11 @@ if random.randint(1, 10) == 3:
 			#if it's too long, keep trying again
 			toot = "{} {}".format(random.choice(prefixes), toot)
 
-client.toot(toot)
-print("Created toot: {}".format(toot))
+if media != None:
+	#this is an image post!
+	mediaID = client.media_post(media, description = media_description)
+	print(mediaID)
+	client.status_post(media_description, media_ids = [mediaID], visibility = "unlisted")
+else:
+	client.status_post(status = toot, visibility = "unlisted")
+	print("Created toot: {}".format(toot))
