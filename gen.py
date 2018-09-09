@@ -23,9 +23,10 @@ toot = sentence.replace("\0", "\n")
 media = None
 media_description = None
 
-if random.randint(1, 4) == 2:
+if random.randint(1, 3) == 2:
+	print("nonstandard")
 	#time for some nonstandard behaviour babey
-	choice = random.randint(1, 7)
+	choice = random.randint(1, 15)
 	# choice = 69
 	if choice == 1:
 		insults = ["suck my ass", "you're a poopeater", "go to heck",
@@ -47,20 +48,22 @@ if random.randint(1, 4) == 2:
 		"socialist", "short", "heavy", "nervous", "shy", "gamer", "femme", "butch",
 		"futch", "soft butch", "high femme", "super feminine", "trans",
 		"transbian", "optimistic", "pessimistic", "quiet", "smart", "deep voice", 
-		"ghost", "programmer"]
+		"ghost", "programmer", "ace", "bi", "silly",
+		"girls like @lady_dumb@dragon.garden", 
+		"girls like @Petra_fied@deadinsi.de", "all", "thicc", "kinky",
+		"when wearning rainbow thigh high socks"]
 		compliments = ["so hot", "in right now", "the next big thing", "the best",
 		"all my wives", "so fucking gay", "epic", "literally the best thing",
 		"what i wake up for", "why i'm a lesbian", "worth fighting for",
 		"good praxis", "so fucking cool", "awesome and i'm jealous of them",
-		"great, hit me up ;)"]
+		"great, hit me up ;)", "amazing. bless them all", "heaven", "bae"]
 		toot = "{} girls are {}".format(random.choice(girls),
 			random.choice(compliments))
 	elif choice == 3:
-		#don't do this one TOO much otherwise it'll get really old
-		if random.randint(1, 3) == 2:
-			lesbian = "lesbian"
-			toot = "".join(random.sample(lesbian, len(lesbian)))
+		lesbian = "lesbian"
+		toot = "".join(random.sample(lesbian, len(lesbian)))
 	elif choice >= 4:
+		print("IT'S MEME POSTING TIME BABY")
 
 		#you are now entering the meme arena
 		bad = ["not being a lesbian", "media transfer protocol",
@@ -110,8 +113,8 @@ if random.randint(1, 4) == 2:
 		badchoice = random.choice(bad)
 		goodchoice = random.choice(good)
 
-		subchoice = random.randint(1, 5)
-		# subchoice = 5
+		subchoice = random.randint(1, 6)
+		# subchoice = 6
 
 		if subchoice == 1:
 			#drake meme
@@ -123,6 +126,7 @@ if random.randint(1, 4) == 2:
 				"text 100,50 '{}'".format(goodchoice),
 				"-quality", "10", "meme.jpg"])
 			media_description = "A Drake meme. Drake is disgusted by {}, and is pleased by {}.".format(badchoice, goodchoice)
+
 		elif subchoice == 2:
 			#new meme template
 			subprocess.run(args = ["convert", "memes/new-template.jpg",
@@ -132,6 +136,7 @@ if random.randint(1, 4) == 2:
 			media_description = "A strange meme. A man wears a stickynote on his " \
 			+ "head, labeled \"{}\". Underneath the man, we see ".format(badchoice) \
 			+ "the text \"New meme format template- thoughts?\""
+
 		elif subchoice == 3:
 			#bouncer meme
 			subprocess.run(args = ["convert", "memes/bouncer.jpg", "-pointsize",
@@ -141,8 +146,9 @@ if random.randint(1, 4) == 2:
 				"-gravity", "center", "-draw",
 				"text -150,70 '{}'".format(goodchoice),
 				"-quality", "10", "meme.jpg"])
-			media_description = "A bouncer meme." \
+			media_description = "A bouncer meme. " \
 			+ "The bouncer refuses {}, and allows {}.".format(badchoice, goodchoice)
+
 		elif subchoice == 4:
 			#stepped in shit meme
 			subprocess.run(args = ["convert", "memes/shit.jpg", "-pointsize", "30",
@@ -151,6 +157,7 @@ if random.randint(1, 4) == 2:
 			media_description = "A comic. A man steps in shit, and exclaims such. " \
 			+ "He checks his foot, and we see that he has " \
 			+ "{} written on the sole of his shoe.".format(badchoice)
+
 		elif subchoice == 5:
 			#karl marx quote
 			subprocess.run(args = ["convert", "memes/marx.jpg", "-pointsize", "70",
@@ -160,10 +167,21 @@ if random.randint(1, 4) == 2:
 			media_description = "A quote from Karl Marx. The quote reads: " \
 			+ "Fuck {}. I love {}!".format(badchoice, goodchoice)
 
+		elif subchoice == 6:
+			subprocess.run(args = ["convert", "memes/brain.jpg", "-pointsize", "20",
+				"-gravity", "center", "-draw",
+				"text -150,-250 '{}'".format(goodchoice), "meme.jpg"])
+			subprocess.run(args = ["convert", "meme.jpg", "-pointsize", "20",
+				"-gravity", "center", "-draw",
+				"text -170,30 '{}'".format(badchoice), "meme.jpg"])
+			media_description="A comic. A girl's brain says {}.".format(goodchoice) \
+			+ " She is unfased and says \"i love that\". The girl's brain then " \
+			+ "says {}, which mortifies her.".format(badchoice)
+
 		media = "meme.jpg"
 
 	else:
-		print ("lynne is still working on me. i'm not done quite yet!")
+		toot = "lynne is still working on me. i'm not done quite yet!"
 
 prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "IMPORTANT ADMIN ACCOUNCMENT:\n", "my name's lynne and i'm here to say,",
@@ -175,21 +193,23 @@ prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "from now on,", "protip:", "life advice:", "take it from me,",
 "as a slime girl,", "as a robot,", "im robot and",
 "@lynnesbian@deadinsi.de i have made a post for you, mistress:\n",
-"this one's for you @lady_lumb@dragon.garden\n", "good evening."]
-if random.randint(1, 10) == 3:
+"this one's for you @lady_lumb@dragon.garden\n", "good evening.",
+"i believe it was karl marx who said"]
+if random.randint(1, 3) == 3:
 	#add a prefix
 	if len(toot) < 500:
 		#if it's already the maximum length, don't waste our time
-		toot = "{} {}".format(random.choice(prefixes), toot)
+		ogtoot = toot
+		toot = "{} {}".format(random.choice(prefixes), ogtoot)
 		while len(toot) > 500:
 			#if it's too long, keep trying again
-			toot = "{} {}".format(random.choice(prefixes), toot)
+			toot = "{} {}".format(random.choice(prefixes), ogtoot)
 
 if media != None:
 	#this is an image post!
 	mediaID = client.media_post(media, description = media_description)
-	print(mediaID)
 	client.status_post(media_description, media_ids = [mediaID], visibility = "unlisted")
+	print("Created media toot: " + media_description)
 else:
 	client.status_post(status = toot, visibility = "unlisted")
 	print("Created toot: {}".format(toot))
