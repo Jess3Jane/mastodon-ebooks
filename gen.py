@@ -91,16 +91,16 @@ if random.randint(1, 3) == 2:
 
 		badchoice = random.choice(bad)
 		goodchoice = random.choice(good)
-		subprocess.run(args = ["convert", "drake.jpg", "-pointsize", "30",
+		subprocess.run(args = ["convert", "memes/drake.jpg", "-pointsize", "30",
 			"-gravity", "center", "-draw",
-			"text 20,-150 '{}'".format(badchoice), "drakeout.jpg"])
+			"text 20,-150 '{}'".format(badchoice), "meme.jpg"])
 
-		subprocess.run(args = ["convert", "drakeout.jpg", "-pointsize", "30",
+		subprocess.run(args = ["convert", "meme.jpg", "-pointsize", "30",
 			"-gravity", "center", "-draw",
 			"text 20,50 '{}'".format(goodchoice),
-			"-quality", "10", "drakeout.jpg"])
+			"-quality", "10", "meme.jpg"])
 
-		media = "drakeout.jpg"
+		media = "meme.jpg"
 		media_description = "A Drake meme. Drake is disgusted by {}, and is pleased by {}.".format(badchoice, goodchoice)
 
 	else:
