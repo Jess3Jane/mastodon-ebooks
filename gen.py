@@ -67,8 +67,9 @@ prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "i'm gonna get shit for this but", "somebody had to say this:",
 "i may be a lowly python script, but", "", "beep boop", "heads up:", 
 "from now on,", "protip:", "life advice:", "take it from me,",
-"as a slime girl,", "as a robot,", "beep boop", "beep", "boop",
-"@lynnesbian@deadinsi.de i have made a post for you, mistress:\n"]
+"as a slime girl,", "as a robot,", "im robot and",
+"@lynnesbian@deadinsi.de i have made a post for you, mistress:\n",
+"this one's for you @lady_lumb@dragon.garden\n", "good evening."]
 if random.randint(1, 10) == 3:
 	#add a prefix
 	if len(toot) < 500:
