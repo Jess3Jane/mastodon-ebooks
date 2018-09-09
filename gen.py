@@ -23,7 +23,7 @@ toot = sentence.replace("\0", "\n")
 media = None
 media_description = None
 
-if random.randint(1, 10) == 3:
+if random.randint(1, 3) == 2:
 	#time for some nonstandard behaviour babey
 	choice = random.randint(1, 4)
 	if choice == 1:
