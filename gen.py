@@ -74,7 +74,7 @@ if random.randint(1, 3) == 2:
 		"you used to call me\non your cell phone", "the lorax movie",
 		'"ethical" capitalism', "disease, pestilence, war, famine", "ISIS",
 		"citrustwee claiming\nit\\'s her birthday", "being straight",
-		"pinging @everyone on a discord\nwith more than 10 people", "brocialism",
+		"pinging @everyone on\na discord with\nmore than 10 people", "brocialism",
 		"capitalist apologia", "reddit", "doxxing", "fatphobia", "biphobia",
 		"transphobia", "transmisia", "homophobia", "racism", "misogyny",
 		"anti-feminism", "aphobia", "enbyphobia", "gender binary",
@@ -85,9 +85,11 @@ if random.randint(1, 3) == 2:
 		"being sucked into\na black hole", "unfunny jokes",
 		"AAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAA", "that guy everyone hates",
 		"the second level in\nsonic spinball", "bitcoin memers",
-		"the entire right wing", "conservatism", "doodoo faeces"]
+		"the entire right wing", "conservatism", "doodoo faeces", "neoliberalism",
+		"islamophobia", "hating on bots", "poop", "EA games", "intel GPUs",
+		"hating a thing because\nit's mainstream", "war"]
 
-		good = ["generating memes with imagemagick and python", "being gay", 
+		good = ["generating memes with\nimagemagick and python", "being gay", 
 		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
 		"yuri", "linux", "the girl reading this", "the enby reading this",
 		"mastodon", "pleroma", "the fediverse", "being super gay", "OwO", "0u0",
@@ -103,10 +105,11 @@ if random.randint(1, 3) == 2:
 		"the colour purple", "the number 3, as\nit is my favourite\nnumber", "me",
 		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns", "lumb"
 		"being a nice person", "supporting indie artists", "big mood",
-		"speedrunning", "decentralising the web",
+		"speedrunning", "decentralising the web", "encryption", "comraderie",
 		"seizing the means\nof production", "karl marx", "pyotr kropotkin",
 		"big dick energy", "smol dick energy", "surrleal meams",
-		"lynnesbian\'s amazing ass", "lady lumb", "oestrogen"]
+		"lynnesbian\'s amazing ass", "lady lumb", "oestrogen", "seinfeld",
+		"girldick", "femdom", "robots"]
 
 		#convert drake.jpg -pointsize 30 -gravity center -draw "text 20,-150 'not slime girls'" drakeout.jpg
 
@@ -189,12 +192,16 @@ prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "hey everyone", "@everyone", "/!\\ CORRECT OPINION ALERT/!\\\n",
 "just saw the news...", "okay but", "truth bomb:", "this is controversial but",
 "i'm gonna get shit for this but", "somebody had to say this:",
-"i may be a lowly python script, but", "", "beep boop", "heads up:", 
+"i may be a lowly python script, but", "", "BZZZZZT", "heads up:", 
 "from now on,", "protip:", "life advice:", "take it from me,",
 "as a slime girl,", "as a robot,", "im robot and",
 "@lynnesbian@deadinsi.de i have made a post for you, mistress:\n",
 "this one's for you @lady_lumb@dragon.garden\n", "good evening.",
-"i believe it was karl marx who said"]
+"i believe it was karl marx who said", "*kicks down your door*",
+"*screaming*", "okay but", "boost if", "it's officail:", "breaking:", 
+"it brings me no joy to say this...", "*flops into the fediverse*",
+"this is my gender:", "*slithers up to u*", "[SCREAMING LOUDLY]",
+"*in baby voice*", "#epic", "#hashtagsareforlosers", "calling all gamers."]
 if random.randint(1, 3) == 3:
 	#add a prefix
 	if len(toot) < 500:
