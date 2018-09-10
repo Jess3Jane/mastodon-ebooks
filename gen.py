@@ -23,10 +23,10 @@ toot = sentence.replace("\0", "\n")
 media = None
 media_description = None
 
-if random.randint(1, 3) == 2:
+if random.randint(1, 2) == 2:
 	print("nonstandard")
 	#time for some nonstandard behaviour babey
-	choice = random.randint(1, 15)
+	choice = random.randint(1, 12)
 	# choice = 69
 	if choice == 1:
 		insults = ["suck my ass", "you're a poopeater", "go to heck",
@@ -49,20 +49,33 @@ if random.randint(1, 3) == 2:
 		"futch", "soft butch", "high femme", "super feminine", "trans",
 		"transbian", "optimistic", "pessimistic", "quiet", "smart", "deep voice", 
 		"ghost", "programmer", "ace", "bi", "silly",
-		"girls like @lady_dumb@dragon.garden", 
-		"girls like @Petra_fied@deadinsi.de", "all", "thicc", "kinky",
+		"@lady_dumb@dragon.garden type", "goth", "nonbinary", 
+		"@Petra_fied@deadinsi.de type", "all", "thicc", "kinky",
 		"when wearning rainbow thigh high socks"]
 		compliments = ["so hot", "in right now", "the next big thing", "the best",
 		"all my wives", "so fucking gay", "epic", "literally the best thing",
 		"what i wake up for", "why i'm a lesbian", "worth fighting for",
 		"good praxis", "so fucking cool", "awesome and i'm jealous of them",
-		"great, hit me up ;)", "amazing. bless them all", "heaven", "bae"]
+		"great, hit me up ;)", "amazing. bless them all", "heaven", "bae", "gay af"]
 		toot = "{} girls are {}".format(random.choice(girls),
 			random.choice(compliments))
 	elif choice == 3:
 		lesbian = "lesbian"
 		toot = "".join(random.sample(lesbian, len(lesbian)))
-	elif choice >= 4:
+	elif choice == 4:
+		services = ["discord", "windows", "python", "github", "signal", "skype",
+		"linux", "programming", "black magic", "twitter", "mastodon", "games",
+		"steam", "tinder", "uber", "google", "bing", "ask jeeves", "ffmpeg",
+		"debian", "typing lessons", "many wives", "communism", "HTTP", "unix",
+		"reddit", "email", "gmail", "DEFLATE compression", "love",
+		"one hundred dollars", "nethack", "WiFi", "ebooks bots", "validation"]
+		demographics = ["witches", "lesbians", "communists", "expecting mothers",
+		"microsoft employees", "transbians", "the rest of us", "dummies", "me",
+		"girls", "cats", "slime girls", "luigi stans", "robots", "capitalists",
+		"programmers", "atheists", "the elderly", "all", "ever", "cowboys", 
+		"danny devito"]
+		toot = "{} for {}".format(random.choice(services), random.choice(demographics))
+	elif choice >= 5:
 		print("IT'S MEME POSTING TIME BABY")
 
 		#you are now entering the meme arena
@@ -80,14 +93,14 @@ if random.randint(1, 3) == 2:
 		"anti-feminism", "aphobia", "enbyphobia", "gender binary",
 		"what\\'s up gamers", "diarrhoea", "irritable bowel syndrome", "scurvy",
 		"traditionalism", "clowns", "gluten allergy", "deez nuts",
-		"cisgender people", "the cisheteropatriarchy", "uwu", "shitty memes",
+		"cisgender people", "the cisheteropatriarchy", "shitty memes",
 		"monopoly (the economic thing)", "monopoly (the board game)",
 		"being sucked into\na black hole", "unfunny jokes",
 		"AAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAA", "that guy everyone hates",
 		"the second level in\nsonic spinball", "bitcoin memers",
 		"the entire right wing", "conservatism", "doodoo faeces", "neoliberalism",
-		"islamophobia", "hating on bots", "poop", "EA games", "intel GPUs",
-		"hating a thing because\nit's mainstream", "war"]
+		"islamophobia", "hating on bots", "farts", "EA games", "intel GPUs",
+		"hating something because\nit's mainstream", "war", "the bourgeois"]
 
 		good = ["generating memes with\nimagemagick and python", "being gay", 
 		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
@@ -106,10 +119,11 @@ if random.randint(1, 3) == 2:
 		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns", "lumb"
 		"being a nice person", "supporting indie artists", "big mood",
 		"speedrunning", "decentralising the web", "encryption", "comraderie",
-		"seizing the means\nof production", "karl marx", "pyotr kropotkin",
+		"seizing the means\nof production", "Karl Marx", "Pyotr Kropotkin",
 		"big dick energy", "smol dick energy", "surrleal meams",
-		"lynnesbian\'s amazing ass", "lady lumb", "oestrogen", "seinfeld",
-		"girldick", "femdom", "robots"]
+		"lynnesbian\'s amazing ass", "lady lumb", "oestrogen", "Seinfeld",
+		"girldick", "femdom", "robots", "uwu", "bootsy", "friendship", "tribadism",
+		"a lesbian commune", "beans"]
 
 		#convert drake.jpg -pointsize 30 -gravity center -draw "text 20,-150 'not slime girls'" drakeout.jpg
 
@@ -201,8 +215,10 @@ prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "*screaming*", "okay but", "boost if", "it's officail:", "breaking:", 
 "it brings me no joy to say this...", "*flops into the fediverse*",
 "this is my gender:", "*slithers up to u*", "[SCREAMING LOUDLY]",
-"*in baby voice*", "#epic", "#hashtagsareforlosers", "calling all gamers."]
-if random.randint(1, 3) == 3:
+"*in baby voice*", "#epic", "#hashtagsareforlosers", "calling all gamers.",
+"*fires gun into the air*", "@Petra_fied@deadinsi.de is cute and", 
+"ummmm no sweaty."]
+if random.randint(1, 5) == 3:
 	#add a prefix
 	if len(toot) < 500:
 		#if it's already the maximum length, don't waste our time
@@ -211,6 +227,9 @@ if random.randint(1, 3) == 3:
 		while len(toot) > 500:
 			#if it's too long, keep trying again
 			toot = "{} {}".format(random.choice(prefixes), ogtoot)
+
+if random.randint(1, 100) == 3:
+	toot = "girls"
 
 if media != None:
 	#this is an image post!
