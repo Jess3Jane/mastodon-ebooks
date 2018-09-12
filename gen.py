@@ -88,7 +88,8 @@ if random.randint(1, 2) == 2:
 
 		#you are now entering the meme arena
 		bad = ["not being a lesbian", "media transfer protocol",
-		"proprietary software", "capitalism", "heterosexuality", "not slime girls",
+		"proprietary software", "capitalism", "heterosexuality",
+		"accidentally hitting on\na straight person", "battery leakage",
 		"not following\n@lynnesbian@deadinsi.de", "shitposts", "elon musk", 
 		"reply guys", "gamers", "alt-right bullshit", "twitter", "subtoots",
 		"instance drama", "billionaires", "millionaires", 
@@ -108,7 +109,8 @@ if random.randint(1, 2) == 2:
 		"the second level in\nsonic spinball", "bitcoin memers",
 		"the entire right wing", "conservatism", "doodoo faeces", "neoliberalism",
 		"islamophobia", "hating on bots", "farts", "EA games", "intel GPUs",
-		"hating something because\nit's mainstream", "war", "the bourgeois"]
+		"hating something because\nit's mainstream", "war", "the bourgeois",
+		"eating poop", "agony", "deleting good toots", "fascism", "imperialism"]
 
 		good = ["generating memes with\nimagemagick and python", "being gay", 
 		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
