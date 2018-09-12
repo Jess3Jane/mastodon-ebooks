@@ -49,7 +49,7 @@ if random.randint(1, 2) == 2:
 		"futch", "soft butch", "high femme", "super feminine", "trans",
 		"transbian", "optimistic", "pessimistic", "quiet", "smart", "deep voice", 
 		"ghost", "programmer", "ace", "bi", "silly",
-		"@lady_dumb@dragon.garden type", "goth", "nonbinary", 
+		"@lady_lumb@dragon.garden type", "goth", "nonbinary", 
 		"@Petra_fied@deadinsi.de type", "all", "thicc", "kinky",
 		"when wearning rainbow thigh high socks"]
 		compliments = ["so hot", "in right now", "the next big thing", "the best",
