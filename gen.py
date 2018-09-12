@@ -75,13 +75,21 @@ if random.randint(1, 2) == 2:
 		"programmers", "atheists", "the elderly", "all", "ever", "cowboys", 
 		"danny devito"]
 		toot = "{} for {}".format(random.choice(services), random.choice(demographics))
-	elif choice >= 5:
+	elif choice == 5:
+		types = ["slime", "dick", "lynne", "lumb", "PickleRick", "epic", "meme",
+		"anus", "gay", "petra", "poop", "butt", "robot", "BDSM", "email", "bitcoin",
+		"spaghetti", "fart", "VapeApe", "mastodon", "masto", "fedi", "coin",
+		"dick", "poly", "rainbow", "gay", "super", "GIMP", "splat", "steam",
+		"apple", "dump"]
+		value = random.randint(100, 10000) / 100.0
+		toot = "{}coin is valued at {}".format(random.choice(types), value)
+	elif choice >= 6:
 		print("IT'S MEME POSTING TIME BABY")
 
 		#you are now entering the meme arena
 		bad = ["not being a lesbian", "media transfer protocol",
 		"proprietary software", "capitalism", "heterosexuality", "not slime girls",
-		"not following @lynnesbian@deadinsi.de", "shitposts", "elon musk", 
+		"not following\n@lynnesbian@deadinsi.de", "shitposts", "elon musk", 
 		"reply guys", "gamers", "alt-right bullshit", "twitter", "subtoots",
 		"instance drama", "billionaires", "millionaires", 
 		"you used to call me\non your cell phone", "the lorax movie",
@@ -116,14 +124,15 @@ if random.randint(1, 2) == 2:
 		"socialism", "staying woke", "intersectionalism",
 		"the tendency of the rate\nof profit to fall", "being gay", "bottom text",
 		"the colour purple", "the number 3, as\nit is my favourite\nnumber", "me",
-		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns", "lumb"
+		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns", "lumb",
 		"being a nice person", "supporting indie artists", "big mood",
 		"speedrunning", "decentralising the web", "encryption", "comraderie",
 		"seizing the means\nof production", "Karl Marx", "Pyotr Kropotkin",
 		"big dick energy", "smol dick energy", "surrleal meams",
 		"lynnesbian\'s amazing ass", "lady lumb", "oestrogen", "Seinfeld",
 		"girldick", "femdom", "robots", "uwu", "bootsy", "friendship", "tribadism",
-		"a lesbian commune", "beans"]
+		"a lesbian commune", "beans", "vape ape", "regular horse", "big titty alf",
+		"the orb"]
 
 		#convert drake.jpg -pointsize 30 -gravity center -draw "text 20,-150 'not slime girls'" drakeout.jpg
 
@@ -229,7 +238,7 @@ if random.randint(1, 5) == 3:
 			toot = "{} {}".format(random.choice(prefixes), ogtoot)
 
 if random.randint(1, 100) == 3:
-	toot = "girls"
+	toot = "girls" #sometimes it just says "girls"
 
 if media != None:
 	#this is an image post!
