@@ -73,7 +73,8 @@ if random.randint(1, 2) == 2:
 		"microsoft employees", "transbians", "the rest of us", "dummies", "me",
 		"girls", "cats", "slime girls", "luigi stans", "robots", "capitalists",
 		"programmers", "atheists", "the elderly", "all", "ever", "cowboys", 
-		"danny devito"]
+		"danny devito", "the blockchain", "the greater good", "socialists",
+		"vampires", "goths"]
 		toot = "{} for {}".format(random.choice(services), random.choice(demographics))
 	elif choice == 5:
 		types = ["slime", "dick", "lynne", "lumb", "PickleRick", "epic", "meme",
@@ -81,8 +82,8 @@ if random.randint(1, 2) == 2:
 		"spaghetti", "fart", "VapeApe", "mastodon", "masto", "fedi", "coin",
 		"dick", "poly", "rainbow", "gay", "super", "GIMP", "splat", "steam",
 		"apple", "dump"]
-		value = random.randint(100, 10000) / 100.0
-		toot = "{}coin is valued at {}".format(random.choice(types), value)
+		value = random.randint(100, 10000000) / 100.0
+		toot = "{}coin is valued at ${} USD".format(random.choice(types), value)
 	elif choice >= 6:
 		print("IT'S MEME POSTING TIME BABY")
 
@@ -103,6 +104,7 @@ if random.randint(1, 2) == 2:
 		"what\\'s up gamers", "diarrhoea", "irritable bowel syndrome", "scurvy",
 		"traditionalism", "clowns", "gluten allergy", "deez nuts",
 		"cisgender people", "the cisheteropatriarchy", "shitty memes",
+		"overly long text\nthat has a chance\nof not being correctly\nformatted",
 		"monopoly (the economic thing)", "monopoly (the board game)",
 		"being sucked into\na black hole", "unfunny jokes",
 		"AAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAA", "that guy everyone hates",
@@ -110,7 +112,8 @@ if random.randint(1, 2) == 2:
 		"the entire right wing", "conservatism", "doodoo faeces", "neoliberalism",
 		"islamophobia", "hating on bots", "farts", "EA games", "intel GPUs",
 		"hating something because\nit's mainstream", "war", "the bourgeois",
-		"eating poop", "agony", "deleting good toots", "fascism", "imperialism"]
+		"eating poop", "agony", "deleting good toots", "fascism", "imperialism",
+		"extorting the poor", "the blockchain", "death", "The Straights"]
 
 		good = ["generating memes with\nimagemagick and python", "being gay", 
 		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
@@ -123,7 +126,7 @@ if random.randint(1, 2) == 2:
 		"arch linux", "playstation portable", "a PSP running\ncustom firmware",
 		"unicode", "writing everything in lowercase\nto seem cool and distant",
 		"love", "the fediverse", "after dark", "nudes from cuties", "anarchism",
-		"socialism", "staying woke", "intersectionalism",
+		"socialism", "staying woke", "intersectionalism", "femboys", "gayyyyy",
 		"the tendency of the rate\nof profit to fall", "being gay", "bottom text",
 		"the colour purple", "the number 3, as\nit is my favourite\nnumber", "me",
 		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns", "lumb",
@@ -131,18 +134,17 @@ if random.randint(1, 2) == 2:
 		"speedrunning", "decentralising the web", "encryption", "comraderie",
 		"seizing the means\nof production", "Karl Marx", "Pyotr Kropotkin",
 		"big dick energy", "smol dick energy", "surrleal meams",
-		"lynnesbian\'s amazing ass", "lady lumb", "oestrogen", "Seinfeld",
+		"lynnesbian\\'s amazing ass", "lady lumb", "oestrogen", "Seinfeld",
 		"girldick", "femdom", "robots", "uwu", "bootsy", "friendship", "tribadism",
 		"a lesbian commune", "beans", "vape ape", "regular horse", "big titty alf",
-		"the orb"]
-
-		#convert drake.jpg -pointsize 30 -gravity center -draw "text 20,-150 'not slime girls'" drakeout.jpg
+		"the orb", "girls with thick thighs", "open source software", "smooches",
+		"two factor\nauthentication", "encryption", "fmt.Sprintf()", "jorts"]
 
 		badchoice = random.choice(bad)
 		goodchoice = random.choice(good)
 
-		subchoice = random.randint(1, 6)
-		# subchoice = 6
+		subchoice = random.randint(1, 7)
+		# subchoice = 7
 
 		if subchoice == 1:
 			#drake meme
@@ -196,6 +198,7 @@ if random.randint(1, 2) == 2:
 			+ "Fuck {}. I love {}!".format(badchoice, goodchoice)
 
 		elif subchoice == 6:
+			#the brain meme (not the expanding one)
 			subprocess.run(args = ["convert", "memes/brain.jpg", "-pointsize", "20",
 				"-gravity", "center", "-draw",
 				"text -150,-250 '{}'".format(goodchoice), "meme.jpg"])
@@ -205,6 +208,15 @@ if random.randint(1, 2) == 2:
 			media_description="A comic. A girl's brain says {}.".format(goodchoice) \
 			+ " She is unfased and says \"i love that\". The girl's brain then " \
 			+ "says {}, which mortifies her.".format(badchoice)
+
+		elif subchoice == 7:
+			#mussolini quote
+			subprocess.run(args = ["convert", "memes/mussolini.jpg", "-pointsize", "50",
+				"-gravity", "center", "-fill", "white", "-draw",
+				"text 150,-50 'You know what I love\nmore than anything?\n{}.\nIt\\'s fantastic.".format(badchoice, goodchoice),
+				"meme.jpg"])
+			media_description = "A quote from Benito Mussolini. The quote reads: " \
+			+ "You know what I love more than anything? {}. It's fantastic.".format(badchoice, goodchoice)
 
 		media = "meme.jpg"
 
