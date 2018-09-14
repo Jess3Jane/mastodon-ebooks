@@ -48,15 +48,17 @@ if random.randint(1, 2) == 2:
 		"socialist", "short", "heavy", "nervous", "shy", "gamer", "femme", "butch",
 		"futch", "soft butch", "high femme", "super feminine", "trans",
 		"transbian", "optimistic", "pessimistic", "quiet", "smart", "deep voice", 
-		"ghost", "programmer", "ace", "bi", "silly",
+		"ghost", "programmer", "ace", "bi", "silly", 
 		"@lady_lumb@dragon.garden type", "goth", "nonbinary", 
 		"@Petra_fied@deadinsi.de type", "all", "thicc", "kinky",
-		"when wearning rainbow thigh high socks"]
+		"girls in rainbow thigh high socks, omg... those"]
 		compliments = ["so hot", "in right now", "the next big thing", "the best",
 		"all my wives", "so fucking gay", "epic", "literally the best thing",
 		"what i wake up for", "why i'm a lesbian", "worth fighting for",
 		"good praxis", "so fucking cool", "awesome and i'm jealous of them",
-		"great, hit me up ;)", "amazing. bless them all", "heaven", "bae", "gay af"]
+		"great, hit me up ;)", "amazing. bless them all", "heaven", "bae",
+		"gay af", "so hot. you should add lynne on discord.", "1000\% gay",
+		"prime marriage material tbh"]
 		toot = "{} girls are {}".format(random.choice(girls),
 			random.choice(compliments))
 	elif choice == 3:
@@ -68,21 +70,27 @@ if random.randint(1, 2) == 2:
 		"steam", "tinder", "uber", "google", "bing", "ask jeeves", "ffmpeg",
 		"debian", "typing lessons", "many wives", "communism", "HTTP", "unix",
 		"reddit", "email", "gmail", "DEFLATE compression", "love",
-		"one hundred dollars", "nethack", "WiFi", "ebooks bots", "validation"]
+		"one hundred dollars", "nethack", "WiFi", "ebooks bots", "validation",
+		"free healthcare", "today is going to be a great day for", "hugs",
+		"12 Rules for", "uber eats", "a private internet just for",
+		"HD texture pack", "how to install linux", "good praxis", "boost",
+		"this toot is ONLY", "legalise marriage", "smooches", "windows", "SMS",
+		"an XML-based language"]
 		demographics = ["witches", "lesbians", "communists", "expecting mothers",
 		"microsoft employees", "transbians", "the rest of us", "dummies", "me",
 		"girls", "cats", "slime girls", "luigi stans", "robots", "capitalists",
 		"programmers", "atheists", "the elderly", "all", "ever", "cowboys", 
 		"danny devito", "the blockchain", "the greater good", "socialists",
-		"vampires", "goths"]
+		"vampires", "goths", "gay people", "president", "lynne",
+		"the girl reading this"]
 		toot = "{} for {}".format(random.choice(services), random.choice(demographics))
 	elif choice == 5:
 		types = ["slime", "dick", "lynne", "lumb", "PickleRick", "epic", "meme",
 		"anus", "gay", "petra", "poop", "butt", "robot", "BDSM", "email", "bitcoin",
 		"spaghetti", "fart", "VapeApe", "mastodon", "masto", "fedi", "coin",
 		"dick", "poly", "rainbow", "gay", "super", "GIMP", "splat", "steam",
-		"apple", "dump"]
-		value = random.randint(100, 10000000) / 100.0
+		"apple", "dump", "bit", "doge", "slorp"]
+		value = random.randint(100, 1000000) / 100.0
 		toot = "{}coin is valued at ${} USD".format(random.choice(types), value)
 	elif choice >= 6:
 		print("IT'S MEME POSTING TIME BABY")
@@ -104,8 +112,10 @@ if random.randint(1, 2) == 2:
 		"what\\'s up gamers", "diarrhoea", "irritable bowel syndrome", "scurvy",
 		"traditionalism", "clowns", "gluten allergy", "deez nuts",
 		"cisgender people", "the cisheteropatriarchy", "shitty memes",
+		"\"ironic\" racism", "don\\'t ask, don\\'t tell", "quote tooting",
+		"using gay as\nan insult", "calling toots \"tweets\"",
 		"overly long text\nthat has a chance\nof not being correctly\nformatted",
-		"monopoly (the economic thing)", "monopoly (the board game)",
+		"monopoly (the economic thing)", "monopoly (board game)",
 		"being sucked into\na black hole", "unfunny jokes",
 		"AAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAA", "that guy everyone hates",
 		"the second level in\nsonic spinball", "bitcoin memers",
@@ -113,14 +123,17 @@ if random.randint(1, 2) == 2:
 		"islamophobia", "hating on bots", "farts", "EA games", "intel GPUs",
 		"hating something because\nit's mainstream", "war", "the bourgeois",
 		"eating poop", "agony", "deleting good toots", "fascism", "imperialism",
-		"extorting the poor", "the blockchain", "death", "The Straights"]
+		"extorting the poor", "the blockchain", "death", "The Straights",
+		"Linus Torvalds being\nan asshole for\nno reason", "chan culture",
+		"not tipping well\n(if you can\nafford it)", "poop",
+		"removing artist's URLs\nfrom memes"]
 
 		good = ["generating memes with\nimagemagick and python", "being gay", 
 		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
 		"yuri", "linux", "the girl reading this", "the enby reading this",
 		"mastodon", "pleroma", "the fediverse", "being super gay", "OwO", "0u0",
 		"resurrecting dead memes", "using the drake meme format", "jorts",
-		"markov chains", "jpeg compression", "you <3", "lynne", 
+		"markov chains", "JPEG compression", "you <3", "lynne", 
 		"replying to this toot", "fully automated luxury\ngay space communism",
 		"fat yoshi", "my butt", "kinkposting", "hornt on main", "debian",
 		"arch linux", "playstation portable", "a PSP running\ncustom firmware",
@@ -130,20 +143,23 @@ if random.randint(1, 2) == 2:
 		"the tendency of the rate\nof profit to fall", "being gay", "bottom text",
 		"the colour purple", "the number 3, as\nit is my favourite\nnumber", "me",
 		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns", "lumb",
-		"being a nice person", "supporting indie artists", "big mood",
+		"being a nice person", "supporting indie artists", "having a big mood",
 		"speedrunning", "decentralising the web", "encryption", "comraderie",
 		"seizing the means\nof production", "Karl Marx", "Pyotr Kropotkin",
-		"big dick energy", "smol dick energy", "surrleal meams",
+		"big dick energy", "smol dick energy", "surreal meams",
 		"lynnesbian\\'s amazing ass", "lady lumb", "oestrogen", "Seinfeld",
 		"girldick", "femdom", "robots", "uwu", "bootsy", "friendship", "tribadism",
 		"a lesbian commune", "beans", "vape ape", "regular horse", "big titty alf",
 		"the orb", "girls with thick thighs", "open source software", "smooches",
-		"two factor\nauthentication", "encryption", "fmt.Sprintf()", "jorts"]
+		"two factor\nauthentication", "encryption", "fmt.Sprintf()", "love",
+		"memes that don\\'t\nmake sense", "ogg vorbis", "chiptune", "dani",
+		"seasons 1-3 of\nspongebob", "big tiddy goth GF", "",
+		]
 
 		badchoice = random.choice(bad)
 		goodchoice = random.choice(good)
 
-		subchoice = random.randint(1, 7)
+		subchoice = random.randint(1, 8)
 		# subchoice = 7
 
 		if subchoice == 1:
@@ -213,15 +229,25 @@ if random.randint(1, 2) == 2:
 			#mussolini quote
 			subprocess.run(args = ["convert", "memes/mussolini.jpg", "-pointsize", "50",
 				"-gravity", "center", "-fill", "white", "-draw",
-				"text 150,-50 'You know what I love\nmore than anything?\n{}.\nIt\\'s fantastic.".format(badchoice, goodchoice),
+				"text 150,-50 'You know what I love\nmore than anything?\n{}.\nIt\\'s integral to fascism.".format(badchoice, goodchoice),
 				"meme.jpg"])
 			media_description = "A quote from Benito Mussolini. The quote reads: " \
-			+ "You know what I love more than anything? {}. It's fantastic.".format(badchoice, goodchoice)
+			+ "You know what I love more than anything? {}. It's integral to fascism.".format(badchoice, goodchoice)
+
+		elif subchoice == 8:
+			#no fear / one fear
+			subprocess.run(args = ["convert", "memes/fear.jpg", "-pointsize", "30",
+				"-gravity", "center", "-draw",
+				"text 0,-50 '{}'".format(badchoice), "meme.jpg"])
+			media_description = "A comic. A person walks by wearing a shirt that says" \
+			+ " \"NO FEAR\". They read another person's shirt, which says " \
+			+ "{}. In the final panel, the first person's shirt says \"ONE FEAR\".".format(badchoice)
 
 		media = "meme.jpg"
 
 	else:
-		toot = "lynne is still working on me. i'm not done quite yet!"
+		toot = "THIS TEXT SHOULD NEVER APPEAR! @lynnesbian@deadinside mistress," \
+		+ " you have made a terrible mistake!!"
 
 prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "IMPORTANT ADMIN ACCOUNCMENT:\n", "my name's lynne and i'm here to say,",
@@ -235,12 +261,19 @@ prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "@lynnesbian@deadinsi.de i have made a post for you, mistress:\n",
 "this one's for you @lady_lumb@dragon.garden\n", "good evening.",
 "i believe it was karl marx who said", "*kicks down your door*",
-"*screaming*", "okay but", "boost if", "it's officail:", "breaking:", 
+"*screaming*", "okay but", "boost if", "it's official:", "breaking:", 
 "it brings me no joy to say this...", "*flops into the fediverse*",
 "this is my gender:", "*slithers up to u*", "[SCREAMING LOUDLY]",
 "*in baby voice*", "#epic", "#hashtagsareforlosers", "calling all gamers.",
 "*fires gun into the air*", "@Petra_fied@deadinsi.de is cute and", 
-"ummmm no sweaty."]
+"ummmm no sweaty.", "*cis person voice*", "*extremely white voice*"]
+suffixes = [", and that's the tea, sis.", " send toot", "... right?",
+" and also i'm gay", "! 0u0", " *logs off*", "\nprove me wrong.",
+". spaghetti", " *collapses*", " uwu", " OwO", ". i meant every word of that.",
+". if you disagree with that, unfollow immediately.", ". not up for debate.",
+". i read that on the internet.", "\ndid i make a good post, mistress Lynne?",
+", and furthermore, im gay xd", "...", ". not reading replies to this.",
+" mute thread", "!"]
 if random.randint(1, 5) == 3:
 	#add a prefix
 	if len(toot) < 500:
@@ -250,6 +283,16 @@ if random.randint(1, 5) == 3:
 		while len(toot) > 500:
 			#if it's too long, keep trying again
 			toot = "{} {}".format(random.choice(prefixes), ogtoot)
+
+if random.randint(1, 10) == 3:
+	#add a suffix
+	if len(toot) < 500:
+		#if it's already the maximum length, don't waste our time
+		ogtoot = toot
+		toot = "{}{}".format(ogtoot, random.choice(suffixes))
+		while len(toot) > 500:
+			#if it's too long, keep trying again
+			toot = "{}{}".format(ogtoot, random.choice(suffixes))
 
 if random.randint(1, 100) == 3:
 	toot = "girls" #sometimes it just says "girls"
