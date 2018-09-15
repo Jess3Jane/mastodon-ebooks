@@ -18,4 +18,4 @@ sentence = None
 # you will make that damn sentence
 while sentence is None:
     sentence = model.make_sentence(tries=100000)
-client.toot(sentence.replace("\0", "\n"))
+client.status_post(sentence.replace("\0", "\n"),spoiler_text="markov 🤖",visibility="unlisted")
