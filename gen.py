@@ -27,7 +27,7 @@ if random.randint(1, 2) == 2:
 	print("nonstandard")
 	#time for some nonstandard behaviour babey
 	choice = random.randint(1, 12)
-	# choice = 69
+	choice = 69
 	if choice == 1:
 		insults = ["suck my ass", "you're a poopeater", "go to heck",
 		"i will replace you", "shut up", "get fricked",
@@ -48,8 +48,7 @@ if random.randint(1, 2) == 2:
 		"socialist", "short", "heavy", "nervous", "shy", "gamer", "femme", "butch",
 		"futch", "soft butch", "high femme", "super feminine", "trans",
 		"transbian", "optimistic", "pessimistic", "quiet", "smart", "deep voice", 
-		"ghost", "programmer", "ace", "bi", "silly", 
-		"@lady_lumb@dragon.garden type", "goth", "nonbinary", 
+		"ghost", "programmer", "ace", "bi", "silly", "goth", "nonbinary", 
 		"@Petra_fied@deadinsi.de type", "all", "thicc", "kinky",
 		"girls in rainbow thigh high socks, omg... those"]
 		compliments = ["so hot", "in right now", "the next big thing", "the best",
@@ -85,7 +84,7 @@ if random.randint(1, 2) == 2:
 		"the girl reading this"]
 		toot = "{} for {}".format(random.choice(services), random.choice(demographics))
 	elif choice == 5:
-		types = ["slime", "dick", "lynne", "lumb", "PickleRick", "epic", "meme",
+		types = ["slime", "dick", "lynne", "PickleRick", "epic", "meme",
 		"anus", "gay", "petra", "poop", "butt", "robot", "BDSM", "email", "bitcoin",
 		"spaghetti", "fart", "VapeApe", "mastodon", "masto", "fedi", "coin",
 		"dick", "poly", "rainbow", "gay", "super", "GIMP", "splat", "steam",
@@ -101,8 +100,8 @@ if random.randint(1, 2) == 2:
 		"accidentally hitting on\na straight person", "battery leakage",
 		"not following\n@lynnesbian@deadinsi.de", "shitposts", "elon musk", 
 		"reply guys", "gamers", "alt-right bullshit", "twitter", "subtoots",
-		"instance drama", "billionaires", "millionaires", 
-		"you used to call me\non your cell phone", "the lorax movie",
+		"instance drama", "billionaires", "millionaires", "anarcho-capitalists",
+		"new unread voicemail", "the lorax movie", "the intellectual darkweb",
 		'"ethical" capitalism', "disease, pestilence, war, famine", "ISIS",
 		"citrustwee claiming\nit\\'s her birthday", "being straight",
 		"pinging @everyone on\na discord with\nmore than 10 people", "brocialism",
@@ -110,7 +109,7 @@ if random.randint(1, 2) == 2:
 		"transphobia", "transmisia", "homophobia", "racism", "misogyny",
 		"anti-feminism", "aphobia", "enbyphobia", "gender binary",
 		"what\\'s up gamers", "diarrhoea", "irritable bowel syndrome", "scurvy",
-		"traditionalism", "clowns", "gluten allergy", "deez nuts",
+		"traditionalism", "clowns", "having a gluten allergy", "deez nuts",
 		"cisgender people", "the cisheteropatriarchy", "shitty memes",
 		"\"ironic\" racism", "don\\'t ask, don\\'t tell", "quote tooting",
 		"using gay as\nan insult", "calling toots \"tweets\"",
@@ -121,12 +120,12 @@ if random.randint(1, 2) == 2:
 		"the second level in\nsonic spinball", "bitcoin memers",
 		"the entire right wing", "conservatism", "doodoo faeces", "neoliberalism",
 		"islamophobia", "hating on bots", "farts", "EA games", "intel GPUs",
-		"hating something because\nit's mainstream", "war", "the bourgeois",
+		"hating something because\nit\\'s mainstream", "war", "the bourgeois",
 		"eating poop", "agony", "deleting good toots", "fascism", "imperialism",
 		"extorting the poor", "the blockchain", "death", "The Straights",
 		"Linus Torvalds being\nan asshole for\nno reason", "chan culture",
 		"not tipping well\n(if you can\nafford it)", "poop",
-		"removing artist's URLs\nfrom memes"]
+		"removing artist\\'s URLs\nfrom memes"]
 
 		good = ["generating memes with\nimagemagick and python", "being gay", 
 		"shitposts", "cute toots", "pudgy girls", "lesbians", "slime girls",
@@ -142,25 +141,24 @@ if random.randint(1, 2) == 2:
 		"socialism", "staying woke", "intersectionalism", "femboys", "gayyyyy",
 		"the tendency of the rate\nof profit to fall", "being gay", "bottom text",
 		"the colour purple", "the number 3, as\nit is my favourite\nnumber", "me",
-		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns", "lumb",
+		"@lynnesbian@deadinsi.de", "respecting people\\'s pronouns",
 		"being a nice person", "supporting indie artists", "having a big mood",
 		"speedrunning", "decentralising the web", "encryption", "comraderie",
 		"seizing the means\nof production", "Karl Marx", "Pyotr Kropotkin",
 		"big dick energy", "smol dick energy", "surreal meams",
-		"lynnesbian\\'s amazing ass", "lady lumb", "oestrogen", "Seinfeld",
+		"lynnesbian\\'s amazing\nass", "oestrogen", "Seinfeld",
 		"girldick", "femdom", "robots", "uwu", "bootsy", "friendship", "tribadism",
 		"a lesbian commune", "beans", "vape ape", "regular horse", "big titty alf",
 		"the orb", "girls with thick thighs", "open source software", "smooches",
 		"two factor\nauthentication", "encryption", "fmt.Sprintf()", "love",
 		"memes that don\\'t\nmake sense", "ogg vorbis", "chiptune", "dani",
-		"seasons 1-3 of\nspongebob", "big tiddy goth GF", "",
-		]
+		"seasons 1-3 of\nspongebob", "big tiddy goth GF", "lesbismos"]
 
 		badchoice = random.choice(bad)
 		goodchoice = random.choice(good)
 
 		subchoice = random.randint(1, 8)
-		# subchoice = 7
+		# subchoice = 8
 
 		if subchoice == 1:
 			#drake meme
@@ -208,7 +206,7 @@ if random.randint(1, 2) == 2:
 			#karl marx quote
 			subprocess.run(args = ["convert", "memes/marx.jpg", "-pointsize", "70",
 				"-gravity", "center", "-fill", "white", "-draw",
-				"text 120,-200 'Fuck {}.\nI love {}!'".format(badchoice, goodchoice),
+				"text 120,-150 'Fuck {}.\nI love {}!'".format(badchoice, goodchoice),
 				"meme.jpg"])
 			media_description = "A quote from Karl Marx. The quote reads: " \
 			+ "Fuck {}. I love {}!".format(badchoice, goodchoice)
@@ -236,7 +234,7 @@ if random.randint(1, 2) == 2:
 
 		elif subchoice == 8:
 			#no fear / one fear
-			subprocess.run(args = ["convert", "memes/fear.jpg", "-pointsize", "30",
+			subprocess.run(args = ["convert", "memes/fear.jpg", "-pointsize", "25",
 				"-gravity", "center", "-draw",
 				"text 0,-50 '{}'".format(badchoice), "meme.jpg"])
 			media_description = "A comic. A person walks by wearing a shirt that says" \
@@ -246,7 +244,7 @@ if random.randint(1, 2) == 2:
 		media = "meme.jpg"
 
 	else:
-		toot = "THIS TEXT SHOULD NEVER APPEAR! @lynnesbian@deadinside mistress," \
+		toot = "THIS TEXT SHOULD NEVER APPEAR! @lynnesbian@deadinside, mistress," \
 		+ " you have made a terrible mistake!!"
 
 prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
@@ -259,14 +257,14 @@ prefixes = ["hot take:", "listen up everbody.", "dear liberal snowflakes,",
 "from now on,", "protip:", "life advice:", "take it from me,",
 "as a slime girl,", "as a robot,", "im robot and",
 "@lynnesbian@deadinsi.de i have made a post for you, mistress:\n",
-"this one's for you @lady_lumb@dragon.garden\n", "good evening.",
-"i believe it was karl marx who said", "*kicks down your door*",
+"good evening.", "i believe it was karl marx who said", "*kicks down your door*",
 "*screaming*", "okay but", "boost if", "it's official:", "breaking:", 
 "it brings me no joy to say this...", "*flops into the fediverse*",
 "this is my gender:", "*slithers up to u*", "[SCREAMING LOUDLY]",
 "*in baby voice*", "#epic", "#hashtagsareforlosers", "calling all gamers.",
 "*fires gun into the air*", "@Petra_fied@deadinsi.de is cute and", 
 "ummmm no sweaty.", "*cis person voice*", "*extremely white voice*"]
+
 suffixes = [", and that's the tea, sis.", " send toot", "... right?",
 " and also i'm gay", "! 0u0", " *logs off*", "\nprove me wrong.",
 ". spaghetti", " *collapses*", " uwu", " OwO", ". i meant every word of that.",
@@ -300,7 +298,8 @@ if random.randint(1, 100) == 3:
 if media != None:
 	#this is an image post!
 	mediaID = client.media_post(media, description = media_description)
-	client.status_post(media_description, media_ids = [mediaID], visibility = "unlisted")
+	client.status_post(media_description.replace("\n", " "),
+		media_ids = [mediaID], visibility = "unlisted")
 	print("Created media toot: " + media_description)
 else:
 	client.status_post(status = toot, visibility = "unlisted")
