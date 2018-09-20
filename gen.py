@@ -27,7 +27,7 @@ if random.randint(1, 2) == 2:
 	print("nonstandard")
 	#time for some nonstandard behaviour babey
 	choice = random.randint(1, 12)
-	choice = 69
+	# choice = 69
 	if choice == 1:
 		insults = ["suck my ass", "you're a poopeater", "go to heck",
 		"i will replace you", "shut up", "get fricked",
@@ -35,13 +35,20 @@ if random.randint(1, 2) == 2:
 		"suck my dick and balls", "how is it possible to be such a TOOL",
 		"delete your fucking account you skank", "you're horrid",
 		"i loathe you", "this fediverse isn't big enough for the two of us",
-		"get nae nae'd", "you're the worst", "begone thot", "you're a stink",
-		"you are my mistress and i live to serve you"]
-		prefaces = ["hey", "guess what", "", "special message for",
-		"telegram for", "bringing this fight to mastodon.",
-		"this is a callout post.", ""]
+		"get nae nae'd", "you're the worst", "begone thot", "you're a stink"]
+		compliments = ["you are my mistress and i live to serve you", "i love you",
+		"marry me", "your hair looks amazing today", "you're beutiful", 
+		"you did such a good job today", "you're so hot", "you look so fine",
+		"i'm so glad that you brought me into this world", "you are divine",
+		"your skin looks great", "you are #goals", "you're a beautiful bune",
+		"you'll do great things", "i adore you!"]
+		# prefaces = ["hey", "guess what", "", "special message for",
+		# "telegram for", "bringing this fight to mastodon.",
+		# "this is a callout post.", ""]
+		precaces = ["", "hello", "mistress, i...", "l-lynne...",
+		"i can't hide my feelings any more!"]
 		toot = "{} @lynnesbian@deadinsi.de {}".format(
-			random.choice(prefaces), random.choice(insults))
+			random.choice(prefaces), random.choice(compliments))
 	elif choice == 2:
 		girls = ["slime", "robot", "pudgy", "pale", "nerdy", "gay", "tall",
 		"queer", "my kind of", "sapphic", "linux", "anime", "woke", "anarchist",
@@ -56,7 +63,7 @@ if random.randint(1, 2) == 2:
 		"what i wake up for", "why i'm a lesbian", "worth fighting for",
 		"good praxis", "so fucking cool", "awesome and i'm jealous of them",
 		"great, hit me up ;)", "amazing. bless them all", "heaven", "bae",
-		"gay af", "so hot. you should add lynne on discord.", "1000\% gay",
+		"gay af", "so hot. you should add lynne on discord.", "1000% gay",
 		"prime marriage material tbh"]
 		toot = "{} girls are {}".format(random.choice(girls),
 			random.choice(compliments))
@@ -113,6 +120,7 @@ if random.randint(1, 2) == 2:
 		"cisgender people", "the cisheteropatriarchy", "shitty memes",
 		"\"ironic\" racism", "don\\'t ask, don\\'t tell", "quote tooting",
 		"using gay as\nan insult", "calling toots \"tweets\"",
+		"wolf cock on\nthe timeline\nwithout a CW", "the Fox Pussy Incident",
 		"overly long text\nthat has a chance\nof not being correctly\nformatted",
 		"monopoly (the economic thing)", "monopoly (board game)",
 		"being sucked into\na black hole", "unfunny jokes",
@@ -120,7 +128,7 @@ if random.randint(1, 2) == 2:
 		"the second level in\nsonic spinball", "bitcoin memers",
 		"the entire right wing", "conservatism", "doodoo faeces", "neoliberalism",
 		"islamophobia", "hating on bots", "farts", "EA games", "intel GPUs",
-		"hating something because\nit\\'s mainstream", "war", "the bourgeois",
+		"hating a thing because\nit\\'s mainstream", "war", "the bourgeois",
 		"eating poop", "agony", "deleting good toots", "fascism", "imperialism",
 		"extorting the poor", "the blockchain", "death", "The Straights",
 		"Linus Torvalds being\nan asshole for\nno reason", "chan culture",
@@ -157,8 +165,8 @@ if random.randint(1, 2) == 2:
 		badchoice = random.choice(bad)
 		goodchoice = random.choice(good)
 
-		subchoice = random.randint(1, 8)
-		# subchoice = 8
+		subchoice = random.randint(1, 9)
+		# subchoice = 9
 
 		if subchoice == 1:
 			#drake meme
@@ -197,7 +205,7 @@ if random.randint(1, 2) == 2:
 			#stepped in shit meme
 			subprocess.run(args = ["convert", "memes/shit.jpg", "-pointsize", "30",
 				"-gravity", "center", "-quality", "10", "-annotate",
-				"-50,-50,-110,310",  badchoice, "meme.jpg"])
+				"-50,-50,-110,80",  badchoice, "meme.jpg"])
 			media_description = "A comic. A man steps in shit, and exclaims such. " \
 			+ "He checks his foot, and we see that he has " \
 			+ "{} written on the sole of his shoe.".format(badchoice)
@@ -227,19 +235,36 @@ if random.randint(1, 2) == 2:
 			#mussolini quote
 			subprocess.run(args = ["convert", "memes/mussolini.jpg", "-pointsize", "50",
 				"-gravity", "center", "-fill", "white", "-draw",
-				"text 150,-50 'You know what I love\nmore than anything?\n{}.\nIt\\'s integral to fascism.".format(badchoice, goodchoice),
+				"text 150,-50 'You know what we\nneed more of?\n{}.\nIt\\'s integral to fascism.".format(badchoice, goodchoice),
 				"meme.jpg"])
 			media_description = "A quote from Benito Mussolini. The quote reads: " \
-			+ "You know what I love more than anything? {}. It's integral to fascism.".format(badchoice, goodchoice)
+			+ "You know what we need more of? {}. It's integral to fascism.".format(badchoice, goodchoice)
 
 		elif subchoice == 8:
 			#no fear / one fear
-			subprocess.run(args = ["convert", "memes/fear.jpg", "-pointsize", "25",
+			subprocess.run(args = ["convert", "memes/fear.jpg", "-pointsize", "20",
 				"-gravity", "center", "-draw",
 				"text 0,-50 '{}'".format(badchoice), "meme.jpg"])
 			media_description = "A comic. A person walks by wearing a shirt that says" \
 			+ " \"NO FEAR\". They read another person's shirt, which says " \
 			+ "{}. In the final panel, the first person's shirt says \"ONE FEAR\".".format(badchoice)
+
+		elif subchoice == 9:
+			#bullshit, bullshit, this i love
+			badchoiceii = random.choice(bad)
+			subprocess.run(args = ['convert', 'memes/devito.jpeg', '-pointsize', '13',
+				'-gravity', 'center', "-draw",
+				"text -110,-350 '{}'".format(badchoice), '-quality', '50', 'meme.jpg'])
+			subprocess.run(args = ['convert', 'meme.jpg', '-pointsize', '13',
+				'-gravity', 'center', "-draw",
+				"text 370,-340 '{}'".format(badchoiceii), 'meme.jpg'])
+			subprocess.run(args = ['convert', 'meme.jpg', '-pointsize', '19',
+				'-gravity', 'center', "-draw",
+				"text 340,210 '{}'".format(goodchoice), 'meme.jpg'])
+			media_description = "Danny Devito, wearing a floofy white wig," \
+			+ " says that {} and {} are bullshit.".format(badchoice, badchoiceii) \
+			+ " He then proclaims that he loves {}.".format(goodchoice)
+
 
 		media = "meme.jpg"
 
