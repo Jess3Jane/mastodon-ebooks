@@ -5,17 +5,22 @@ from bs4 import BeautifulSoup
 import re
 
 api_base_url = "https://botsin.space"
+scopes = ["read:statuses", "read:accounts", "read:follows", "write:statuses"]
 
 if not path.exists("clientcred.secret"):
-	print("No clientcred.secret, registering application")
-	Mastodon.create_app("ebooks", api_base_url=api_base_url, to_file="clientcred.secret")
+
+    print("No clientcred.secret, registering application")
+    Mastodon.create_app("ebooks", api_base_url=api_base_url, to_file="clientcred.secret", scopes=scopes)
 
 if not path.exists("usercred.secret"):
-	print("No usercred.secret, registering application")
-	email = input("Email: ")
-	password = getpass("Password: ")
-	client = Mastodon(client_id="clientcred.secret", api_base_url=api_base_url)
-	client.log_in(email, password, to_file="usercred.secret")
+    print("No usercred.secret, registering application")
+#    email = input("Email: ")
+#    password = getpass("Password: ")
+    client = Mastodon(client_id="clientcred.secret", api_base_url=api_base_url)
+#    client.log_in(email, password, to_file="usercred.secret")
+    print("Visit this url:")
+    print(client.auth_request_url(scopes=scopes))
+    client.log_in(code=input("Secret: "), to_file="usercred.secret", scopes=scopes)
 
 def parse_toot(toot):
 	if toot.spoiler_text != "": return

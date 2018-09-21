@@ -17,6 +17,7 @@ with open("corpus.txt", encoding="utf-8") as fp:
 print("tooting")
 sentence = None
 # you will make that damn sentence
+
 while sentence is None or len(sentence) > 500:
 	sentence = model.make_sentence(tries=100000)
 toot = sentence.replace("\0", "\n")
@@ -329,3 +330,4 @@ if media != None:
 else:
 	client.status_post(status = toot, visibility = "unlisted")
 	print("Created toot: {}".format(toot))
+
