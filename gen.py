@@ -296,8 +296,8 @@ suffixes = [", and that's the tea, sis.", " send toot", "... right?",
 ". if you disagree with that, unfollow immediately.", ". not up for debate.",
 ". i read that on the internet.", "\ndid i make a good post, mistress Lynne?",
 ", and furthermore, im gay xd", "...", ". not reading replies to this.",
-" mute thread", "!"]
-if random.randint(1, 5) == 3:
+" mute thread", "!", ". i love you all"]
+if random.randint(1, 5) == 7:
 	#add a prefix
 	if len(toot) < 500:
 		#if it's already the maximum length, don't waste our time

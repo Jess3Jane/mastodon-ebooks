@@ -65,7 +65,7 @@ def parse_toot(toot):
 def get_toots(client, id):
 	i = 0
 	toots = client.account_statuses(id)
-	while toots is not None:
+	while toots is not None and len(toots) > 0:
 		for toot in toots:
 			t = parse_toot(toot)
 			if t != None:
