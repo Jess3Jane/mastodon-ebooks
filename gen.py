@@ -83,18 +83,19 @@ if random.randint(1, 2) == 2:
 		"debian", "typing lessons", "many wives", "communism", "HTTP", "unix",
 		"reddit", "email", "gmail", "DEFLATE compression", "love",
 		"one hundred dollars", "nethack", "WiFi", "ebooks bots", "validation",
-		"free healthcare", "today is going to be a great day for", "hugs",
-		"12 Rules for", "uber eats", "a private internet just for",
+		"free healthcare", "today is going to be a great day", "hugs",
+		"12 Rules for", "uber eats", "a private internet just",
 		"HD texture pack", "how to install linux", "good praxis", "boost",
 		"this toot is ONLY", "legalise marriage", "smooches", "windows", "SMS",
-		"an XML-based language"]
+		"an XML-based language", "anarchism", "free HRT"]
 		demographics = ["witches", "lesbians", "communists", "expecting mothers",
 		"microsoft employees", "transbians", "the rest of us", "dummies", "me",
 		"girls", "cats", "slime girls", "luigi stans", "robots", "capitalists",
 		"programmers", "atheists", "the elderly", "all", "ever", "cowboys", 
 		"danny devito", "the blockchain", "the greater good", "socialists",
 		"vampires", "goths", "gay people", "president", "lynne",
-		"the girl reading this"]
+		"the girl reading this", "anarchists", "gay lovers", "the queer community",
+		"shitposters"]
 		toot = "{} for {}".format(random.choice(services), random.choice(demographics))
 	elif choice == 5:
 		types = ["slime", "dick", "lynne", "PickleRick", "epic", "meme",
