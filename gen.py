@@ -7,7 +7,15 @@ import markovify
 import json
 import time
 from mastodon import Mastodon
-import re, random, subprocess
+import re, random, subprocess, argparse
+
+parser = argparse.ArgumentParser(description='Generate and post a toot.')
+parser.add_argument('reply', metavar='reply', type=str, nargs='?', 
+	help='ID of the status to reply to')
+parser.add_argument('-s', '--simulate', dest='simulate', action='store_true',
+	help="Print the toot to stdout without posting it")
+
+args = parser.parse_args()
 
 api_base_url = "https://botsin.space" #todo: this shouldn't be hardcoded
 
@@ -16,8 +24,12 @@ client = Mastodon(
         access_token="usercred.secret", 
         api_base_url=api_base_url)
 
+class nlt_fixed(markovify.NewlineText):
+	def test_sentence_input(self, sentence):
+		return True
+
 with open("corpus.txt", encoding="utf-8") as fp:
-  model = markovify.NewlineText(fp.read())
+  model = nlt_fixed(fp.read())
 
 print("tooting")
 sentence = None
@@ -51,8 +63,9 @@ if random.randint(1, 2) == 2:
 		# prefaces = ["hey", "guess what", "", "special message for",
 		# "telegram for", "bringing this fight to mastodon.",
 		# "this is a callout post.", ""]
-		precaces = ["", "hello", "mistress, i...", "l-lynne...",
-		"i can't hide my feelings any more!"]
+		prefaces = ["", "hello", "mistress, i...", "l-lynne...",
+		"i can't hide my feelings any more!", "i have to say this!",
+		"hey cutie~", "psst", "special message for", "good morning"]
 		toot = "{} @lynnesbian@deadinsi.de {}".format(
 			random.choice(prefaces), random.choice(compliments))
 	elif choice == 2:
@@ -95,7 +108,7 @@ if random.randint(1, 2) == 2:
 		"danny devito", "the blockchain", "the greater good", "socialists",
 		"vampires", "goths", "gay people", "president", "lynne",
 		"the girl reading this", "anarchists", "gay lovers", "the queer community",
-		"shitposters"]
+		"shitposters", "bunny girls", "dani"]
 		toot = "{} for {}".format(random.choice(services), random.choice(demographics))
 	elif choice == 5:
 		types = ["slime", "dick", "lynne", "PickleRick", "epic", "meme",
@@ -329,11 +342,13 @@ if random.randint(1, 100) == 3:
 
 if media != None:
 	#this is an image post!
-	mediaID = client.media_post(media, description = media_description)
-	client.status_post(media_description.replace("\n", " "),
-		media_ids = [mediaID], visibility = "unlisted")
+	if not args.simulate:
+		mediaID = client.media_post(media, description = media_description)
+		client.status_post(media_description.replace("\n", " "),
+			media_ids = [mediaID], visibility = "unlisted")
 	print("Created media toot: " + media_description)
 else:
-	client.status_post(status = toot, visibility = "unlisted")
+	if not args.simulate:
+		client.status_post(status = toot, visibility = "unlisted")
 	print("Created toot: {}".format(toot))
 
