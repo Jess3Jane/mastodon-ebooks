@@ -19,10 +19,7 @@ if not path.exists("clientcred.secret"):
 
 if not path.exists("usercred.secret"):
     print("No usercred.secret, registering application")
-#    email = input("Email: ")
-#    password = getpass("Password: ")
     client = Mastodon(client_id="clientcred.secret", api_base_url=api_base_url)
-#    client.log_in(email, password, to_file="usercred.secret")
     print("Visit this url:")
     print(client.auth_request_url(scopes=scopes))
     client.log_in(code=input("Secret: "), to_file="usercred.secret", scopes=scopes)
@@ -41,8 +38,8 @@ def parse_toot(toot):
 	# for mention in soup.select("a.u-url.mention"):
 	#     mention.unwrap()
 
-	# we will destroy the mentions until we're ready to use them
-	# someday turbocat, you will talk to your sibilings
+	# this is the code that removes all mentions
+	# TODO: make it so that it removes the @ and instance but keeps the name
 	for mention in soup.select("span.h-card"):
 		mention.decompose()
 	
@@ -97,4 +94,7 @@ with open("corpus.txt", "w+", encoding="utf-8") as fp:
 	for f in following:
 		print("Downloading toots for user @{}".format(f.username))
 		for t in get_toots(client, f.id):
-			fp.write(t + "\n")
+			try:
+				fp.write(t + "\n")
+			except:
+				pass #ignore toots that can't be encoded properly
