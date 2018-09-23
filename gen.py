@@ -3,11 +3,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import markovify
-import json
-import time
 from mastodon import Mastodon
-import re, random, subprocess, argparse
+import argparse
 import create
 
 parser = argparse.ArgumentParser(description='Generate and post a toot.')
