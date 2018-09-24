@@ -25,7 +25,7 @@ def make_toot(force_markov = False, args = None):
 	# print("tooting")
 	sentence = None
 	while sentence is None or len(sentence) > 500:
-		sentence = model.make_sentence(tries=100000)
+		sentence = model.make_sentence(tries=1000)
 	toot = sentence.replace("\0", "\n")
 	media = None
 	media_description = None
