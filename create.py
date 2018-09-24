@@ -14,7 +14,7 @@ def render_meme(filename, text, position, size, colour = "black"):
 		"text {} '{}'".format(position, text), "meme.jpg"])
 
 
-def make_toot(args = None):
+def make_toot(force_markov = False, args = None):
 	class nlt_fixed(markovify.NewlineText):
 		def test_sentence_input(self, sentence):
 			return True #all sentences are valid <3
@@ -30,7 +30,7 @@ def make_toot(args = None):
 	media = None
 	media_description = None
 
-	if random.randint(1, 2) == 2:
+	if not force_markov and random.randint(1, 2) == 2:
 		# print("nonstandard")
 		#time for some nonstandard behaviour babey
 		choice = random.randint(1, 12)

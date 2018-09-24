@@ -4,7 +4,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 from mastodon import Mastodon
-import argparse
+import argparse, sys, traceback
 import create
 
 parser = argparse.ArgumentParser(description='Generate and post a toot.')
@@ -22,16 +22,21 @@ client = Mastodon(
         access_token="usercred.secret", 
         api_base_url=api_base_url)
 
-class nlt_fixed(markovify.NewlineText):
-	def test_sentence_input(self, sentence):
-		return True
-
 toot = create.make_toot()
 if not args.simulate:
-	if toot['media'] != None:
-		mediaID = client.media_post(toot['media'], description = toot['toot'])
-		client.status_post(toot['toot'].replace("\n", " "),
-			media_ids = [mediaID], visibility = "unlisted")
-	else:
-		client.status_post(toot['toot'], visibility = 'unlisted')
+	try:
+		if toot['media'] != None:
+			mediaID = client.media_post(toot['media'], description = toot['toot'])
+			client.status_post(toot['toot'].replace("\n", " "),
+				media_ids = [mediaID], visibility = "unlisted")
+		else:
+			client.status_post(toot['toot'], visibility = 'unlisted')
+	except Exception as err:
+		toot = {
+		"toot":
+		"Mistress @lynnesbian@deadinsi.de, something has gone terribly" \
+		+ " wrong! While attempting to post a toot, I received the following" \
+		+ " error:\n" + "\n".join(traceback.format_tb(sys.exc_info()[2]))
+		}
+		client.status_post(toot['toot'], visibility = 'unlisted', spoiler_text = "Error!")
 print(toot['toot'])
